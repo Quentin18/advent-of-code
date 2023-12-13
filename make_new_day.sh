@@ -11,4 +11,5 @@ echo "make day $1"
 
 mkdir $1
 cp template.py $1/part1.py
-touch $1/input.txt
+touch $1/input_test.txt
+git add $1
