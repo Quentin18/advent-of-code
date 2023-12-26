@@ -1,5 +1,5 @@
 def main() -> None:
-    with open("input.txt", "r") as file:
+    with open("input.txt", "r", encoding="utf-8") as file:
         calories = 0
         calories_list = []
 
