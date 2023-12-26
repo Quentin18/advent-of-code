@@ -9,7 +9,7 @@ fi
 
 echo "make day $1"
 
-mkdir $1
+mkdir -p $1
 cp template.py $1/part1.py
 touch $1/input_test.txt
 git add $1
