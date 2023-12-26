@@ -127,7 +127,8 @@ def main() -> None:
     # &hh -> lv
     # &dt -> lv
     # &lv -> rx
-    # so, lv send a low pulse to rx when the most recent pulse sent by st, tn, hh and dt is a high pulse
+    # so, lv send a low pulse to rx when the most recent pulse sent by
+    # st, tn, hh and dt is a high pulse
     input_modules = modules["rx"].input_modules[0].input_modules
     print([module.name for module in input_modules], file=sys.stderr)
 

@@ -171,7 +171,10 @@ def count_fallen_bricks(support_map: dict[int, set[int]]) -> int:
 
         count += len(all_fallen_bricks)
         print(
-            f"disintegrating brick {brick} would cause all {len(all_fallen_bricks)} other bricks to fall",
+            (
+                f"disintegrating brick {brick} would cause all {len(all_fallen_bricks)} "
+                "other bricks to fall"
+            ),
             file=sys.stderr,
         )
 

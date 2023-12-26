@@ -1,5 +1,5 @@
 import sys
-from math import ceil, floor, prod, sqrt
+from math import ceil, floor, sqrt
 from typing import NamedTuple
 
 
