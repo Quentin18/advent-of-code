@@ -1,0 +1,4 @@
+black[d]
+isort
+pylint
+pytest
