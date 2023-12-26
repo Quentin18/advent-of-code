@@ -14,7 +14,9 @@ def parse_game(line: str) -> int:
             if int(number) > color_max_number[color]:
                 color_max_number[color] = int(number)
 
-    power = color_max_number["red"] * color_max_number["green"] * color_max_number["blue"]
+    power = (
+        color_max_number["red"] * color_max_number["green"] * color_max_number["blue"]
+    )
     print(f"Game {id_} has power {power}")
     return power
 
