@@ -106,6 +106,7 @@ def get_number_from_row_col(
     return int(number)
 
 
+# pylint: disable=too-many-positional-arguments
 def get_gear_ratio(
     engine_schematic: list[str],
     row: int,

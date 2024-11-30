@@ -57,14 +57,9 @@ class Brick:
 def make_grid(bricks: list[Brick]) -> np.ndarray:
     x_max = y_max = z_max = 0
     for brick in bricks:
-        if brick.x_max > x_max:
-            x_max = brick.x_max
-
-        if brick.y_max > y_max:
-            y_max = brick.y_max
-
-        if brick.z_max > z_max:
-            z_max = brick.z_max
+        x_max = max(x_max, brick.x_max)
+        y_max = max(y_max, brick.y_max)
+        z_max = max(z_max, brick.z_max)
 
     print(f"{x_max=}, {y_max=}, {z_max=}", file=sys.stderr)
 

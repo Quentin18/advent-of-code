@@ -35,9 +35,9 @@ def count_arrangements(record: str) -> int:
                 count += count_arrangements_recursive(
                     condition_index=condition_index + 1,
                     size_index=size_index + 1,
-                    expected_sharps=sizes[size_index + 1] - 1
-                    if size_index + 1 < len(sizes)
-                    else -1,
+                    expected_sharps=(
+                        sizes[size_index + 1] - 1 if size_index + 1 < len(sizes) else -1
+                    ),
                 )
             elif expected_sharps >= 1:
                 count += count_arrangements_recursive(

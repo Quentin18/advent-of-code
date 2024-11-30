@@ -20,8 +20,10 @@ class Node(NamedTuple):
 
 
 def main() -> None:
+    instructions = None
+    network = {}
+
     with open("input.txt", "r", encoding="utf-8") as file:
-        network = {}
         for i, line in enumerate(file):
             if i == 0:
                 instructions = line.strip()

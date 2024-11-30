@@ -29,6 +29,7 @@ def iterate_neighbors(
 
 def main() -> None:
     grid = []
+    start = None
 
     with open("input.txt", "r", encoding="utf-8") as file:
         for row, line in enumerate(file):
