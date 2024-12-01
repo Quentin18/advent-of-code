@@ -1,4 +1,5 @@
 black[d]
 isort
+pre-commit
 pylint
 pytest
