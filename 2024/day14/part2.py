@@ -20,37 +20,6 @@ class Robot:
     def move(self) -> None:
         self.position = (self.position + self.velocity) % [WIDTH, HEIGHT]
 
-    def quadrant(self) -> int | None:
-        if self.position[0] < WIDTH // 2 and self.position[1] < HEIGHT // 2:
-            return 0
-
-        if self.position[0] > WIDTH // 2 and self.position[1] < HEIGHT // 2:
-            return 1
-
-        if self.position[0] < WIDTH // 2 and self.position[1] > HEIGHT // 2:
-            return 2
-
-        if self.position[0] > WIDTH // 2 and self.position[1] > HEIGHT // 2:
-            return 3
-
-        return None
-
-
-def check_christmas_tree(robots: list[Robot]) -> bool:
-    quadrants_count = np.zeros(4, dtype=int)
-
-    for robot in robots:
-        quadrant = robot.quadrant()
-        if quadrant is not None:
-            quadrants_count[quadrant] += 1
-
-    print(quadrants_count)
-
-    return (
-        quadrants_count[0] == quadrants_count[2]
-        and quadrants_count[1] == quadrants_count[3]
-    )
-
 
 def save_img(robots: list[Robot], seconds: int) -> None:
     robot_counts = np.zeros((WIDTH, HEIGHT), dtype=np.uint8)
