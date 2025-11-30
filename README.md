@@ -28,6 +28,12 @@ Install the dependencies:
 pip install -r requirements.txt
 ```
 
+Create a `.env` file with your session cookie:
+
+```bash
+echo -e "SESSION_COOKIE=your_session_cookie" > .env
+```
+
 ## Usage
 
 - The repository contains **one folder per year**.
@@ -60,10 +66,10 @@ python part2.py
 
 ### Make a new day
 
-To make the folder for a new day, use the `make_new_day.sh` script (example with day 1 of 2023):
+To make the folder for a new day, use the `main` script (example with day 1 of 2023):
 
 ```bash
-./make_new_day.sh 2023/day01
+python main.py -y 2023 -d 1
 ```
 
 ## Author
