@@ -34,7 +34,10 @@ def main() -> None:
 
     puzzle_dir = Path(f"{args.year}/day{args.day:02}")
     puzzle_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile("template.py", puzzle_dir / "part1.py")
+
+    part1_file = puzzle_dir / "part1.py"
+    if not part1_file.exists():
+        shutil.copyfile("template.py", part1_file)
 
     with open(puzzle_dir / "input.txt", "w", encoding="utf-8") as file:
         file.write(puzzle_input)
