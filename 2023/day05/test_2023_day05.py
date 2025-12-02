@@ -1,4 +1,4 @@
-from part2 import DestinationSourceRange, SourceRange
+from .part2 import DestinationSourceRange, SourceRange
 
 
 def test_get_destination():

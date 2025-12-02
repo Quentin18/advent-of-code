@@ -1,4 +1,4 @@
-from part1 import is_valid
+from .part1 import is_valid
 
 
 def test_is_valid_when_true():
