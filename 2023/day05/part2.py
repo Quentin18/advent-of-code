@@ -109,9 +109,9 @@ class Converter:
 
         # check ranges
         for i in range(len(ranges) - 1):
-            assert (
-                ranges[i].source_end == ranges[i + 1].source_start - 1
-            ), "wrong ranges"
+            assert ranges[i].source_end == ranges[i + 1].source_start - 1, (
+                "wrong ranges"
+            )
 
     @staticmethod
     def parse(lines: list[str]) -> list[Converter]:
